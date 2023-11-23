@@ -1,0 +1,47 @@
+# Dao
+
+## Guide
+
+```
+# install
+npm install
+# deploy 
+npx hardhat run scripts/deployDao.js --network sepolia
+
+Change dao address in deployAttack.js
+
+npx hardhat run scripts/deployAttack.js --network sepolia
+
+#deposit
+
+npx hardhat run scripts/deposit.js --network sepolia
+
+# attack
+
+npx hardhat run scripts/attack.js --network sepolia
+
+
+# please update the contract address after edit contract and re-deploy
+# test
+npx hardhat test --network hardhat # on local hardhat net, no need to deploy
+npx hardhat test # on remote sepolia test net
+
+## Attack
+npx hardhat run scripts/deployDao&Attack.js --network sepolia
+```
+
+The following is how to run the updated attack test script.
+```
+npx hardhat test test/attack.local.test.js --network hardhat
+```
+
+## run Upgrade test
+```npx hardhat run scripts/deploy_upgradeable_dao.js --network sepolia```
+
+Change dao address in deployAttack.js and test scripts
+
+```npx hardhat run scripts/deployAttack.js --network sepolia```
+
+Change attack address in deployAttack.js and test scripts
+
+```npx hardhat test test/upgrade.test.js --network sepolia```
